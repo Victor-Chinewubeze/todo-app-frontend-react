@@ -6,7 +6,7 @@ import CardSchemeState from './context/cardSchemeState'
 function App() {
   return (
     <CardSchemeState>
-      <Root />
+        <Root />
     </CardSchemeState>
   );
 }
