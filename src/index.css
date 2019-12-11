@@ -1,13 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 1rem/1.5 Montserrat, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #eaeaea;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2305a081' fill-opacity='0.17' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    text-align: left;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.formBox {
+  width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #0cab5d;
+  border-radius: 10px;
+  color: #f7dfdd;
+  margin: 20px auto;
+}
+
+form {
+  display: block;
+  align-items: center;
+  max-width: 400px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #0cab5d;
+  outline: none;
+  background: transparent;
+}
+
+
+/* Obtained from Stack overflow - https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+
+.inputBox input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes autofill {
+  to {
+      color: #fff;
+      background: transparent;
+  }
+}
+
+.inputBox label {
+  position: relative;
+  left: 0;
+  top: -30px;
+  padding: 10px 0;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+  left: 0;
+  top: -50px;
+  font-size: 0.8rem;
+  color: #0cab5d;
+}
+
+
+button {
+  background: #0cab5d;
+  color: #fff;
+  border-color: #0cab5d;
+  line-height: 1;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+}
+
+#results {
+  width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #0cab5d;
+  border-radius: 10px;
+  color: #f7dfdd;
+  margin: 20px auto;
+}
+
+.links {
+  display: block;
+  text-align: center;
+  cursor: pointer;
 }
